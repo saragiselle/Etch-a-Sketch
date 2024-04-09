@@ -1,10 +1,21 @@
 
 #grid_container {
 
+    flex-wrap: wrap;
     display : flex;
     width : 500px;
+    height: 500px;
     background-color: black;
-    
-
 
 }
+
+.grid-element {
+    width: 6.25%;
+    height: 6.25%;
+    background: pink;
+}
+
+.grid-element-painted{
+    background-color: black;
+}
+
