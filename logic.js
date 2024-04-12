@@ -1,15 +1,23 @@
 
 const gridContainer = document.getElementById("grid_container");
+const colorPicker = document.getElementById("color-picker")
 
-for( let element= 0; element < 16 * 16 ; element++){
+let gridSize = 16;
 
-    const div = document.createElement("div"); 
-    div.classList.add("grid-element");
-    gridContainer.appendChild(div);
-    div.addEventListener("mouseover",(evt)=>{
-        console.log(evt)
-        evt.target.classList.add("grid-element-painted");  
+createGrid(gridSize);
+
+
+function createGrid(gridSize) {
+
+for( let i= 0; i < gridSize * gridSize ; i++){
+
+    const rowColumn = document.createElement("div"); 
+    rowColumn.setAttribute('class', 'grid-element');
+    gridContainer.appendChild(rowColumn);
+    rowColumn.addEventListener("mouseover",(evt)=>{
+        rowColumn.style.backgroundColor=colorPicker.value
     })
 }
 
+}
 
