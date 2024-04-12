@@ -1,6 +1,9 @@
 
 const gridContainer = document.getElementById("grid_container");
-const colorPicker = document.getElementById("color-picker")
+const colorPicker = document.getElementById("color-picker");
+const newGrid = document.getElementById("new-grid");
+const clearGrid = document.getElementById("clear-grid");
+
 
 let gridSize = 16;
 
@@ -20,4 +23,6 @@ for( let i= 0; i < gridSize * gridSize ; i++){
 }
 
 }
+
+
 
