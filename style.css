@@ -10,21 +10,32 @@ body {
     align-items: center;
 }
 
+#btn-container{
+    display: flex;
+    margin: 10px;
+    flex: 1;
+    justify-content: space-between
+}
+
+
+
 #grid_container {
 
     flex-wrap: wrap;
     display : flex;
-    width : 500px;
-    height: 500px;
+    width : 600px;
+    height: 600px;
     margin: auto;
     border: 1px solid black;
 
 }
 
 .grid-element {
-    width: 6.25%;
-    height: 6.25%; 
+    display: flex;
+    height: 100/gridSize;
+    width:100/gridSize;
     background: pink;
+    border: 0.5px solid rgb(234, 234, 234);
 }
 
 .grid-element-painted{
