@@ -25,15 +25,12 @@ body {
     display : flex;
     width : 600px;
     height: 600px;
-    margin: auto;
     border: 1px solid black;
 
 }
 
 .grid-element {
     display: flex;
-    height: 100/gridSize;
-    width:100/gridSize;
     background: pink;
     border: 0.5px solid rgb(234, 234, 234);
 }
