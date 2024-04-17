@@ -12,21 +12,32 @@ createGrid(gridSize);
 
 function createGrid(gridSize) {
 
-for( let i= 0; i < gridSize * gridSize ; i++){
+    
 
-    const rowColumn = document.createElement("div"); 
-    rowColumn.setAttribute('class', 'grid-element');
-    gridContainer.appendChild(rowColumn);
-    rowColumn.addEventListener("mouseover",(evt)=>{
-        rowColumn.style.backgroundColor=colorPicker.value
-    })
-}
-}
+    for( let i= 0; i < (gridSize * gridSize) ; i++){
 
+       
+            const rowColumn = document.createElement("div");
+
+            rowColumn.setAttribute('class', 'grid-element');
+            let hw = 100/gridSize;
+            rowColumn.style.height=`${hw}%`;
+            rowColumn.style.width=`${hw}%`;
+            gridContainer.appendChild(rowColumn);
+
+        rowColumn.addEventListener("mouseover",(evt)=>{
+
+            rowColumn.style.backgroundColor=colorPicker.value
+
+        }  )
+    }
+}
 
 
 newGrid.addEventListener('click', () =>{
     //crear funcion para remover el grid ya creado
+
+    removeAllChildren(gridContainer);  
 
     //preguntamos al usuario el tama;o del grid
 
